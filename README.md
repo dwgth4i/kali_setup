@@ -1,2 +1,3 @@
 # Kali-setup
-Đây là setup kali của mình, mình khá thích màu mè nên có khá nhiều config :D
+Đây là setup kali của mình, mình thích màu mè nên sẽ dùng tương đối nhiều thứ :D
+
