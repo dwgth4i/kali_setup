@@ -33,6 +33,8 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 curl -sS https://starship.rs/install.sh | sh
 wget https://raw.githubusercontent.com/dwgth4i/kali_setup/main/starship.toml
 mv starship.toml ./.config/starship.toml
+# add this line into .zshrc: 
+# eval "$(starship init zsh)":
 
 # wallpaper at 
 # https://www.yuumeiart.com/#/revive/
