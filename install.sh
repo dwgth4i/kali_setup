@@ -2,10 +2,14 @@
 
 sudo apt update && sudo apt upgrade -y
 
-sudo apt-get install -y wget curl git thunar
-sudo apt-get install -y arandr flameshot arc-theme feh i3blocks i3status i3 i3-wm lxappearance python3-pip rofi unclutter cargo compton papirus-icon-theme imagemagick
-sudo apt-get install -y libxcb-shape0-dev libxcb-keysyms1-dev libpango1.0-dev libxcb-util0-dev xcb libxcb1-dev libxcb-icccm4-dev libyajl-dev libev-dev libxcb-xkb-dev libxcb-cursor-dev libxkbcommon-dev libxcb-xinerama0-dev libxkbcommon-x11-dev libstartup-notification0-dev libxcb-randr0-dev libxcb-xrm0 libxcb-xrm-dev autoconf meson
-sudo apt-get install -y libxcb-render-util0-dev libxcb-shape0-dev libxcb-xfixes0-dev 
+mkdir ~/tools; cd ~/tools; git clone https://github.com/CravateRouge/bloodyAD
+
+sudo apt-get -y update && sudo apt-get -y install gcc clang libclang-dev libgssapi-krb5-2 libkrb5-dev libsasl2-modules-gssapi-mit musl-tools gcc-mingw-w64-x86-64
+cd ~/tools; git clone https://github.com/NH-RED-TEAM/RustHound
+cd RustHound
+make install
+
+mkdir ~/tools/sliver; cd ~/tools/sliver; wget https://github.com/BishopFox/sliver/releases/download/v1.5.42/sliver-server_linux; chmod +X ~/tools/sliver-server_linux
 
 mkdir -p ~/.local/share/fonts/
 
@@ -31,7 +35,7 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 # add zsh-autosuggestions to .zshrc plugins
 
 curl -sS https://starship.rs/install.sh | sh
-wget https://raw.githubusercontent.com/dwgth4i/kali_setup/main/starship.toml
+cd ~; wget https://raw.githubusercontent.com/dwgth4i/kali_setup/main/starship.toml
 mv starship.toml ./.config/starship.toml
 # add this line into .zshrc: 
 # eval "$(starship init zsh)"
